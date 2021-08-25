@@ -59,23 +59,6 @@ document.querySelector('.btn--close-cookie')
     message.parentElement.removeChild(message);
   });
 
-// Styles
-
-message.style.backgroundColor = '#37383d'
-message.style.width = '120%';
-
-message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
-
-document.documentElement.style.setProperty('--color-primary', 'orangered')
-
-
-// Attributes
-
-const logo = document.querySelector('.nav__logo');
-console.log(logo.alt);
-console.log(logo.src);
-console.log(logo.getAttribute('src'));
-console.log(logo.className);
 
 // Scrlloling
 
@@ -89,3 +72,23 @@ btnScrollTo.addEventListener('click', e => {
     behavior: 'smooth'
   })
 });
+
+// const h1 = document.querySelector('h1').addEventListener('mouseenter', e => {
+//   alert('Great')
+// })
+
+// document.querySelector('h1').onmouseenter = e => {
+//   alert('Helo')
+// }
+
+const alertH1 = e => {
+  alert('Helo')
+}
+
+const h1 = document.querySelector('h1');
+h1.addEventListener('mouseenter', alertH1)
+
+setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 2000);
+
+
+
