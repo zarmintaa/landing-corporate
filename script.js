@@ -68,6 +68,36 @@ document.querySelector('.nav__links')
     }
   })
 
+
+// TAB COMPONENT
+
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabContent = document.querySelectorAll('.operations__content');
+
+// tabs.forEach(t => t.addEventListener('click', () => {
+//   console.log('TAB');
+// }))
+
+tabsContainer.addEventListener('click', function(e) {
+  const clicked = e.target.closest('.operations__tab');
+
+  // Guard clause
+  if (!clicked) return
+
+  // remove active classes
+  tabs.forEach(t => t.classList.remove('operations__tab--active'))
+
+  tabContent.forEach(c => c.classList.remove('operations__content--active'))
+
+  clicked.classList.add('operations__tab--active');
+
+  // activate content
+
+  document.querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+})
+
 /////////////////////////////////////
 /////////////////////////////////////
 /////////////////////////////////////
