@@ -82,10 +82,6 @@ document.querySelector('.nav__links')
 // TAB COMPONENT
 
 
-// tabs.forEach(t => t.addEventListener('click', () => {
-//   console.log('TAB');
-// }))
-
 tabsContainer.addEventListener('click', function(e) {
   const clicked = e.target.closest('.operations__tab');
 
@@ -292,79 +288,4 @@ slider();
 
 /////////////////////////////////////
 /////////////////////////////////////
-/////////////////////////////////////
-/////////////////////////////////////
-
-// const allSection = document.querySelectorAll('.section');
-// const allButtons = document.getElementsByTagName('button');
-// console.log(allSection);
-// console.log(allButtons);
-//
-// const header = document.querySelector('.header');
-//
-// const message = document.createElement('div');
-// message.classList.add('cookie-message');
-// message.innerHTML = `We use cookies for improved functionality and analytics<button class='btn  btn--close-cookie'>Got it!</button>`;
-//
-// header.prepend(message);
-// header.append(message)
-// header.before(message)
-// header.after(message)
-// header.append(message.cloneNode(true));
-//
-// document.querySelector('.btn--close-cookie')
-//   .addEventListener('click', () => {
-//     // message.remove()
-//     message.parentElement.removeChild(message);
-//   });
-
-
-
-
-// const h1 = document.querySelector('h1').addEventListener('mouseenter', e => {
-//   alert('Great')
-// })
-
-// document.querySelector('h1').onmouseenter = e => {
-//   alert('Helo')
-// }
-
-/*const alertH1 = e => {
-  alert('Helo')
-}
-
-const h1 = document.querySelector('h1');
-h1.addEventListener('mouseenter', alertH1)
-
-setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 2000);
-*/
-// const randomInt = (min, max) =>
-//   Math.floor(Math.random() * (max - min + 1) + min);
-//
-// const randomColor = () => `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-// console.log(randomColor());
-//
-// document
-//   .querySelector('.nav__link')
-//   .addEventListener('click', function(e) {
-//     this.style.backgroundColor = randomColor();
-//     console.log("LINK", e.target, e.currentTarget);
-//     e.stopPropagation();
-//   })
-//
-//
-// document.querySelector('.nav__links')
-// .addEventListener('click', function (e)  {
-//   this.style.backgroundColor = randomColor();
-//   console.log("CONTAINER", e.target, e.currentTarget);
-//   e.stopPropagation();
-// })
-//
-//
-// document.querySelector('.nav')
-// .addEventListener('click', function (e)  {
-//   this.style.backgroundColor = randomColor();
-//   console.log("NAV", e.target, e.currentTarget);
-// })
-
 
